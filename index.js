@@ -11,7 +11,7 @@ const Customer = mongoose.model('Customer', customerSchema);
 app.get("/getuser", async (req, res) => {
   const data = await Customer.find();
   console.log(data)
-  res.send(data);
+  res.json({name: "Anand, age: 25});
 });
 
 app.listen(port, () => {
