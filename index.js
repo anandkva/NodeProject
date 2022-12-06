@@ -19,7 +19,7 @@ app.listen(port, () => {
 });
 
 mongoose.connect(
-  `${mongo}`,
+  `MONGODB=mongodb+srv://Anand:12345@cluster0.7lpqy.mongodb.net`,
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err) => {
     if (!err) {
