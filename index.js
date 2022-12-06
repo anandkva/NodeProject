@@ -8,7 +8,7 @@ const mongo = process.env.MONGODB;
 const customerSchema = new mongoose.Schema({ name: String, age: Number, email: String });
 const Customer = mongoose.model('Customer', customerSchema);
 
-app.get("/getuser", async (req, res) => {
+app.get("/", async (req, res) => {
   const data = await Customer.find();
   console.log(data)
   res.json({name: "Anand, age: 25});
