@@ -11,7 +11,7 @@ const Customer = mongoose.model('Customer', customerSchema);
 app.get("/", async (req, res) => {
   const data = await Customer.find();
   console.log(data)
-  res.json({name: "Anand, age: 25});
+  res.json({data});
 });
 
 app.listen(port, () => {
@@ -19,7 +19,7 @@ app.listen(port, () => {
 });
 
 mongoose.connect(
-  `MONGODB=mongodb+srv://Anand:12345@cluster0.7lpqy.mongodb.net`,
+  `${mongo}`,
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err) => {
     if (!err) {
